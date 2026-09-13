@@ -1,21 +1,19 @@
-import './App.css'
-import Footer from './components/footer'
-import Header from './components/header'
+import "./App.css";
+import Footer from "./components/footer";
+import Header from "./components/header";
 
 function App() {
-
   return (
     <section className="min-h-screen flex flex-col overflow-x-hidden">
-      <Header/>
+      <Header />
 
-      <main className='flex-1 min-h-screen'>
-        
+      <main className="flex-1 min-h-screen">
+        <p>teste</p>
       </main>
-      
-      <Footer/>
-    </section>
-  )
 
+      <Footer />
+    </section>
+  );
 }
 
-export default App
+export default App;

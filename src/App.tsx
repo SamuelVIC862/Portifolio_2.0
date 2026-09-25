@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Footer from "./components/footer";
 import Header from "./components/header";
+import Section from "./ui/section";
+import Home from "./components/home";
 
 function App() {
   const [darkMode, setDarkMode] = useState<boolean>(false);
@@ -11,12 +13,14 @@ function App() {
 
   return (
     <section
-      className={`min-h-screen flex flex-col bg-background transition-all duration-300`}
+      className={`pt-24 min-h-screen flex flex-col bg-background transition-all duration-300 bg-background`}
     >
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
 
-      <div className="px-52 flex flex-col">
-        <main className="flex-1 min-h-screen"></main>
+      <div className="px-96 flex flex-col">
+        <Section className={""}>
+          <Home />
+        </Section>
       </div>
       <Footer />
     </section>

@@ -1,15 +1,15 @@
 import React from "react";
 
-interface IconProps {
-  icon: string;
+interface ImageProps {
+  src: string;
   size: number;
   className?: string;
 }
 
-const Icon = ({ icon, size, className }: IconProps) => {
+const Icon = ({ src, size, className }: ImageProps) => {
   return (
     <img
-      src={icon}
+      src={src}
       alt=""
       width={size}
       height={size}

@@ -1,18 +1,49 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
+  --animate-fade-up: fade-up 3.5s ease-out infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    50% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+
+
+  
   /* Cores */
   --color-background: var(--background);
   --color-surface: var(--surface);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-textContrast: var(--textContrast);
+  --color-bgContrastHover: var(--bgContrastHover);
+  --color-bgContrast: var(--bgContrast);
+
+  
 
   /* Tipografia */
   --font-sans: "Inter", sans-serif;
 }
 
 :root {
-  --background: #ffffff;
+  --textContrast: #DEDEDE;
+  --bgContrastHover: #000000;
+  --bgContrast: #666666;
+  --background: #DEDEDE;
   --foreground: #141414;
   --surface: #f5f5f5;
   --primary: #141414;
@@ -20,6 +51,9 @@
 }
 
 .dark {
+  --textContrast: #DEDEDE;
+  --bgContrastHover: #2E2E2E;
+  --bgContrast: #4D4D4D;
   --background: #141414;
   --surface: #2e2e2e;
   --primary: #f2f2f2;

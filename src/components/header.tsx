@@ -9,7 +9,7 @@ interface HeaderProps {
 
 function Header({ darkMode, setDarkMode }: HeaderProps) {
   return (
-    <header className="fixed px-52 py-10 top-0 z-50 h-14 w-full">
+    <header className="fixed px-96 py-10 top-0 z-50 h-14 w-full">
       <nav className="flex h-full items-center justify-center gap-6">
         <div className="flex justify-between w-full px-4">
           <div className="flex gap-2 justify-center items-center text-primary">

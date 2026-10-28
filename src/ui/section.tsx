@@ -7,7 +7,9 @@ interface SectionProps {
 
 function Section({ children, className }: SectionProps) {
   return (
-    <section className={`flex-1 min-h-screen py-4 ${className}`}>
+    <section
+      className={`w-full py-4 transition-all duration-300 justify-center flex ${className}`}
+    >
       {children}
     </section>
   );

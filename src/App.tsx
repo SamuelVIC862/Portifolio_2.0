@@ -3,6 +3,9 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import Section from "./ui/section";
 import Home from "./components/home";
+import Experience from "./components/experience";
+import Skills from "./components/skills";
+import Projects from "./components/projects";
 
 function App() {
   const [darkMode, setDarkMode] = useState<boolean>(false);
@@ -13,13 +16,30 @@ function App() {
 
   return (
     <section
-      className={`pt-24 min-h-screen flex flex-col bg-background transition-all duration-300 bg-background`}
+      className={`min-h-screen w-full flex flex-col transition-all duration-300 overflow-hidden`}
     >
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
 
-      <div className="px-96 flex flex-col">
-        <Section className={""}>
-          <Home />
+      <div className="flex flex-col justify-center">
+        <Section className={"pt-24 bg-background"}>
+          <div className="w-280">
+            <Home />
+          </div>
+        </Section>
+        <Section className={"bg-surface"}>
+          <div className="w-280">
+            <Experience />
+          </div>
+        </Section>
+        <Section className={"bg-background"}>
+          <div className="w-280">
+            <Skills />
+          </div>
+        </Section>
+        <Section className={"bg-surface"}>
+          <div className="w-280">
+            <Projects />
+          </div>
         </Section>
       </div>
       <Footer />

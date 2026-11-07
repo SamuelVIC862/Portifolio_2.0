@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ImageProps {
   src: string;
   size: number;

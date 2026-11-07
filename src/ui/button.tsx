@@ -4,25 +4,32 @@ interface ButtonProps {
   children?: React.ReactNode;
   sectionName?: string;
   className?: string;
-  variant?: "default" | "icon" | "link" | "icon2";
+  variant?: "default" | "icon" | "link" | "icon2" | "projects";
+  link?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 function Button({
   children,
   sectionName,
+  link,
   className,
   variant = "default",
   onClick,
 }: ButtonProps) {
-  const scrollToSection = () => {
-    if (!sectionName) {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    if (link) {
+      window.open(link, "_blank", "noopener,noreferrer");
       return;
     }
 
-    document.getElementById(sectionName)?.scrollIntoView({
-      behavior: "smooth",
-    });
+    if (sectionName) {
+      document.getElementById(sectionName)?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+
+    onClick?.(event);
   };
 
   const variants = {
@@ -31,12 +38,14 @@ function Button({
     link: "",
     icon2:
       "p-2 w-4 text-center hover:bg-bgContrastHover w-10 h-10 bg-bgContrast text-textContrast",
+    projects:
+      "absolute -top-5 right-5 flex items-center justify-center size-12 bg-bgContrast dark:bg-bgSecondary text-textContrast transition-colors hover:bg-orange-500 z-10",
   };
 
   return (
     <button
       className={`group p-2 transition-all duration-300 flex flex-col gap-1 ${variants[variant]} ${className}`}
-      onClick={onClick ?? scrollToSection}
+      onClick={handleClick}
     >
       {children}
       <div

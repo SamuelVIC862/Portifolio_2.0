@@ -15,29 +15,27 @@ function App() {
   }, [darkMode]);
 
   return (
-    <section
-      className={`min-h-screen w-full flex flex-col transition-all duration-300 overflow-hidden`}
-    >
+    <section className="min-h-screen w-full flex flex-col overflow-x-clip transition-all duration-300">
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
 
       <div className="flex flex-col justify-center">
-        <Section className={"pt-24 bg-background"}>
-          <div className="w-280">
+        <Section id="Home" className={"pt-24 bg-background"}>
+          <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
             <Home />
           </div>
         </Section>
-        <Section className={"bg-surface"}>
-          <div className="w-280">
+        <Section id="About" className={"bg-surface"}>
+          <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
             <Experience />
           </div>
         </Section>
-        <Section className={"bg-background"}>
-          <div className="w-280">
+        <Section id="Skills" className={"bg-background"}>
+          <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
             <Skills />
           </div>
         </Section>
-        <Section className={"bg-surface"}>
-          <div className="w-280">
+        <Section id="Projects" className={"bg-surface"}>
+          <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
             <Projects />
           </div>
         </Section>

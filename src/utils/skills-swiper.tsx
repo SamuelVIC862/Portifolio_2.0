@@ -71,8 +71,8 @@ interface SkillsSwiperProps {
 
 const SkillsSwiper = ({ name, category, Icon }: SkillsSwiperProps) => {
   return (
-    <div className="relative h-120 border-4 border-borderStyles pb-10 py-5">
-      <div className="flex items-center mb-5 gap-4 px-5">
+    <div className="relative h-112 min-w-0 border-4 border-borderStyles py-5 pb-10 overflow-hidden">
+      <div className="mb-5 flex min-w-0 items-center gap-4 px-4 sm:px-5">
         <div className="relative">
           <Icon
             className="size-7 text-primary z-10 relative"
@@ -80,7 +80,7 @@ const SkillsSwiper = ({ name, category, Icon }: SkillsSwiperProps) => {
           />
           <div className="absolute size-6 bg-orange-500 -top-2 -right-2 z-0"></div>
         </div>
-        <h1 className="w-fit font-extrabold p-1 text-2xl text-primary">
+        <h1 className="w-fit wrap-break-word p-1 text-lg font-extrabold text-primary sm:text-2xl">
           {name}
         </h1>
       </div>
@@ -100,7 +100,7 @@ const SkillsSwiper = ({ name, category, Icon }: SkillsSwiperProps) => {
         }}
         slidesPerView="auto"
         spaceBetween={20}
-        className="h-96 pb-1!"
+        className="h-96 pb-8!"
       >
         {technologies
           .filter((tech) => tech.category === category)

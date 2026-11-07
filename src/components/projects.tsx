@@ -30,20 +30,20 @@ const projects = [
 
 function Projects() {
   return (
-    <div className="flex flex-col text-primary">
+    <div className="flex flex-col text-primary py-10">
       <div className="flex">
-        <div className="flex flex-col w-full gap-6 relative">
-          <div className="flex flex-col w-full gap-4 px-11">
+        <div className="relative flex w-full min-w-0 flex-col gap-6">
+          <div className="flex w-full min-w-0 flex-col gap-4 px-2 sm:px-6 lg:px-11">
             <div className="flex w-full justify-center">
-              <p className="w-fit mt-30.5 mb-20 bg-linear-to-l from-orange-500/15 to-transparent font-extrabold p-1 text-3xl text-primary">
+              <p className="mt-12 mb-8 w-fit bg-linear-to-l from-orange-500/15 to-transparent p-1 text-2xl font-extrabold text-primary sm:mt-16 sm:mb-12 sm:text-3xl lg:mt-24 lg:mb-20">
                 Projetos
               </p>
             </div>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {projects.map((project) => (
                 <article
                   key={project.name}
-                  className="flex h-full flex-col overflow-hidden p-2 hover:bg-background transition-colors duration-500"
+                  className="flex h-full min-w-0 flex-col overflow-hidden p-2 transition-colors duration-500 hover:bg-background"
                 >
                   <img
                     src={project.photo}
@@ -51,7 +51,11 @@ function Projects() {
                     className="aspect-video w-full object-cover"
                   />
                   <div className="flex flex-1 flex-col gap-3 pt-3 relative">
-                    <Button variant="projects">
+                    <Button
+                      sectionName="Home"
+                      variant="projects"
+                      link={project.link}
+                    >
                       <FaArrowUp className="rotate-45" />
                     </Button>
                     <p className="relative ml-3 text-xs text-secondary items-center flex">

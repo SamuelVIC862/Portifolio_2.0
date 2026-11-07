@@ -81,6 +81,7 @@
   --color-bgContrast: var(--bgContrast);
   --color-bgSecondary: var(--bgSecondary);
   --color-borderStyles: var(--borderStyles);
+  --color-footer: #0A0A0A;
 
   /* Tipografia */
   --font-sans: "Inter", sans-serif;
@@ -97,7 +98,6 @@
   --secondary: #666666;
   --bgSecondary: #f5f5f5;
   --borderStyles: #2e2e2e;
-
 }
 
 .dark {

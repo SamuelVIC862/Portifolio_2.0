@@ -3,12 +3,14 @@ import React from "react";
 interface SectionProps {
   className: string;
   children: React.ReactNode;
+  id?: string;
 }
 
-function Section({ children, className }: SectionProps) {
+function Section({ children, className, id }: SectionProps) {
   return (
     <section
-      className={`w-full py-4 transition-all duration-300 justify-center flex ${className}`}
+      id={id}
+      className={`flex min-h-180 w-full scroll-mt-16 justify-center py-4 transition-all duration-300 items-center ${className}`}
     >
       {children}
     </section>

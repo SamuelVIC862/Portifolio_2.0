@@ -30,27 +30,33 @@ function Experience() {
   return (
     <>
       <div className="w-full justify-center flex">
-        <p className="w-fit mt-30.5 ml-20 bg-linear-to-l from-orange-500/15 to-transparent font-extrabold p-1 text-3xl text-primary">
+        <p className="z-10 mt-12 mb-12 w-fit bg-linear-to-l from-orange-500/15 to-transparent p-1 text-2xl font-extrabold text-primary sm:mt-16 sm:text-3xl md:mb-0 md:ml-20 md:mt-24">
           Experiência
         </p>
       </div>
 
-      <div className="flex gap-24 text-primary mb-30.5">
-        <div className="flex items-center gap-4 relative">
-          <div className="absolute w-60 h-180 bg-background top-[-20%] -right-20 border-b-8 border-orange-500"></div>
-          <RandomLines
-            size={100}
-            className="absolute bottom-30 -rotate-10 -right-12"
-          />
-          <SquareStyle className="z-20 top-20 -right-5" />
-          <div className="absolute w-15 h-15 bg-orange-500 bottom-15 -right-3"></div>
-          <div className="bg-white border-8 border-white z-10">
-            <div className="bg-transparent relative w-96 h-96">
-              <img src="/MyPicture.jpg" />
+      <div className="mb-12 flex min-w-0 flex-col gap-8 text-primary sm:mb-30.5 lg:mb-24 md:flex-row lg:items-center lg:gap-24">
+        <div className="relative flex shrink-0 items-center justify-center gap-4">
+          <div className="relative">
+            <div className="absolute -right-20 top-[-20%] h-180 w-60 border-b-8 border-orange-500 bg-background"></div>
+            <RandomLines
+              size={100}
+              className="absolute -right-12 bottom-30  -rotate-10 "
+            />
+            <SquareStyle className="z-20 top-20 -right-5" />
+            <div className="absolute -right-3 bottom-15  size-15 bg-orange-500"></div>
+            <div className="z-20 relative border-8 border-white bg-white">
+              <div className="relative size-56 bg-transparent sm:size-72 lg:size-80">
+                <img
+                  src="/MyPicture.jpg"
+                  alt="Samuel Victor Toscano Araujo"
+                  className="h-full w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
-        <div className="flex w-full min-w-0 flex-1 gap-6 items-center">
+        <div className="flex w-full min-w-0 flex-1 items-center gap-6">
           <Swiper
             modules={[Pagination]}
             slidesPerView="auto"
